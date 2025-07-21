@@ -68,7 +68,7 @@ export default function QuizGame({ questions }) {
           </div>
           <div className="flex items-center justify-between gap-3">
             <button
-              onClick={resetGame}
+              onClick={resetQuiz}
               className="px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer flex items-center justify-center space-x-2 mx-auto"
             >
               <span className="text-xl">🔄</span>

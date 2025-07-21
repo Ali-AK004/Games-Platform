@@ -25,7 +25,7 @@ export default function OpenBoxGame({ boxItems }) {
     <div className="max-w-4xl mx-auto">
       {/* Game Header */}
       <div className="mb-8 text-center">
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+        <div className="bg-gray-400 backdrop-blur-sm rounded-2xl p-6">
           <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center">
             <span className="text-4xl mr-3">📦</span>
             Open the Mystery Boxes!

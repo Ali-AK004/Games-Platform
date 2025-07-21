@@ -135,7 +135,7 @@ export default function UnjumbleGame({ unjumbleData }) {
           🔤 Available Words:
         </h3>
         <div className="">
-          <div className="flex flex-wrap gap-3 justify-center min-h-[80px]">
+          <div className="flex flex-wrap gap-3 justify-center">
             {availableWords.length === 0 ? (
               <div className="text-white/50 text-lg flex items-center">
                 All words used!

@@ -170,7 +170,7 @@ export default function CompleteSentenceGame({ completeSentenceData }) {
           🔤 Available Words:
         </h3>
         <div className="">
-          <div className="flex flex-wrap gap-3 justify-center min-h-[80px]">
+          <div className="flex flex-wrap gap-3 justify-center">
             {availableWords.length === 0 ? (
               <div className="text-white/50 text-lg flex items-center">
                 All words used!
@@ -179,7 +179,7 @@ export default function CompleteSentenceGame({ completeSentenceData }) {
               availableWords.map((word, index) => (
                 <div
                   key={`word-${index}`}
-                  className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg px-4 py-2 cursor-pointer hover:scale-110 transform transition-all duration-300 shadow-lg"
+                  className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg px-6 py-2 cursor-pointer hover:scale-110 transform transition-all duration-300 shadow-lg"
                   onClick={() => {
                     // Find first empty blank
                     const emptyBlankIndex = currentSentence.blanks.findIndex(

@@ -102,8 +102,7 @@ export const flashCards = [
   },
   {
     question: "What is 'Ghunnah'?",
-    answer:
-      "A nasal sound",
+    answer: "A nasal sound",
   },
   {
     question: "What does 'Idgham' mean?",
@@ -144,8 +143,7 @@ export const matchUpData = {
     {
       id: 2,
       term: "Ghunnah",
-      definition:
-        "A nasal sound",
+      definition: "A nasal sound",
     },
     {
       id: 3,
@@ -182,11 +180,11 @@ export const matchUpData = {
     },
     {
       id: 3,
-      text: "Merging or mixing - when one letter merges into another",
+      text: "Merging or mixing of noon sakinah or tanween with certain letters 'يرملون'",
     },
     {
       id: 4,
-      text: "Hiding or concealing the sound of noon sakinah or tanween",
+      text: "Hiding the sound of noon sakinah or tanween",
     },
     {
       id: 5,
@@ -278,11 +276,19 @@ export const groupSortData = {
       emoji: "📝",
       description: "Rules for noon sakinah and tanween",
     },
+    {
+      id: 2,
+      name: "Other Rules",
+      emoji: "📝",
+      description: "Bouncing sound & other Tajweed rules",
+    },
   ],
   items: [
     { id: 1, name: "Idgham", emoji: "🔗", groupId: 1 },
+    { id: 6, name: "Qalqala", emoji: "💥", groupId: 2 },
     { id: 2, name: "Ikhfa", emoji: "🙈", groupId: 1 },
     { id: 3, name: "Iqlab", emoji: "🔄", groupId: 1 },
+    { id: 7, name: "meem & noon shadda", emoji: "🔄", groupId: 2 },
     { id: 5, name: "Izhar", emoji: "🔊", groupId: 1 },
   ],
 };
@@ -343,17 +349,17 @@ export const findMatchData = [
     pairId: 1,
     subtitle: "Definition",
   },
-  { id: 2, text: "Idgham", emoji: "🔗", pairId: 2, subtitle: "Term" },
+  { id: 3, text: "Idgham", emoji: "🔗", pairId: 2, subtitle: "Term" },
   {
-    id: 3,
+    id: 4,
     text: "Merging Letters",
     emoji: "🤝",
     pairId: 2,
     subtitle: "Definition",
   },
-  { id: 3, text: "Qalqalah", emoji: "⚡", pairId: 3, subtitle: "Term" },
+  { id: 5, text: "Qalqalah", emoji: "⚡", pairId: 3, subtitle: "Term" },
   {
-    id: 4,
+    id: 6,
     text: "Bouncing Sound",
     emoji: "🏀",
     pairId: 3,
@@ -383,19 +389,14 @@ export const unjumbleData = [
     correctSentence: "Change ن to م before ب",
   },
   {
-    topic: "Izhaar Letters",
-    words: ["ح", "خ", "ه", "ع", "غ", "أ"],
-    correctSentence: "ح خ ه ع غ أ",
-  },
-  {
     topic: "Ghunnah Time",
     words: ["Nasal", "sound", "for", "2", "beats"],
     correctSentence: "Nasal sound for 2 beats",
   },
   {
     topic: "Qalqalah Word",
-    words: ["قطب", "جد", "makes", "bouncing", "sound"],
-    correctSentence: "قطب جد makes bouncing sound",
+    words: ["قطب", "جد", "letters", "make", "bouncing", "sound"],
+    correctSentence: "قطب جد letters make bouncing sound",
   },
   {
     topic: "Idgham Letters",
