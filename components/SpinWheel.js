@@ -111,7 +111,7 @@ export default function WheelGame({ items }) {
                     <span
                       className="text-white font-bold text-lg drop-shadow-lg whitespace-nowrap"
                       style={{
-                        transform: "translateY(-100px) rotate(-90deg)",
+                        transform: "translateY(-100px)",
                         transformOrigin: "center center",
                       }}
                     >
