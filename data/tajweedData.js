@@ -341,31 +341,29 @@ export const speakingCards = [
 
 // Find Match Game Data - Tap matching pairs to eliminate them
 export const findMatchData = [
-  { id: 1, text: "Ghunnah", emoji: "👃", pairId: 1, subtitle: "Term" },
-  {
-    id: 2,
-    text: "Nasal Sound",
-    emoji: "🔊",
-    pairId: 1,
-    subtitle: "Definition",
-  },
-  { id: 3, text: "Idgham", emoji: "🔗", pairId: 2, subtitle: "Term" },
-  {
-    id: 4,
-    text: "Merging Letters",
-    emoji: "🤝",
-    pairId: 2,
-    subtitle: "Definition",
-  },
-  { id: 5, text: "Qalqalah", emoji: "⚡", pairId: 3, subtitle: "Term" },
-  {
-    id: 6,
-    text: "Bouncing Sound",
-    emoji: "🏀",
-    pairId: 3,
-    subtitle: "Definition",
-  },
-];
+  // Izhaar
+  { id: 1, text: "Izhaar", emoji: "🗣️", pairId: 1, subtitle: "Term" },
+  { id: 2, text: "Clear Pronunciation of نْ before ح خ ه ع غ أ", emoji: "🔊", pairId: 1, subtitle: "Definition" },
+
+  // Ikhfaa
+  { id: 3, text: "Ikhfaa", emoji: "🙊", pairId: 2, subtitle: "Term" },
+  { id: 4, text: "Hiding the sound of نْ or tanween", emoji: "👻", pairId: 2, subtitle: "Definition" },
+
+  // Idgham
+  { id: 5, text: "Idgham", emoji: "🔀", pairId: 3, subtitle: "Term" },
+  { id: 6, text: "Merging نْ or tanween into ي ر م ل و ن", emoji: "🔄", pairId: 3, subtitle: "Definition" },
+
+  // Iqlab
+  { id: 7, text: "Iqlab", emoji: "🔄", pairId: 4, subtitle: "Term" },
+  { id: 8, text: "Changing نْ or tanween to a م sound before ب", emoji: "🔁", pairId: 4, subtitle: "Definition" },
+
+  // Additional pairs (optional)
+  { id: 9, text: "Izhaar Letters", emoji: "🔤", pairId: 5, subtitle: "Term" },
+  { id: 10, text: "ح خ ه ع غ أ", emoji: "📜", pairId: 5, subtitle: "Definition" },
+
+  { id: 11, text: "Idgham Letters", emoji: "🔠", pairId: 6, subtitle: "Term" },
+  { id: 12, text: "ي ر م ل و ن", emoji: "✍️", pairId: 6, subtitle: "Definition" }
+].sort(() => Math.random() - 0.5);
 
 // Unjumble Game Data - Rearrange words to form correct sentences
 export const unjumbleData = [
