@@ -1,84 +1,75 @@
-// data/tajweedGames.js
+// Quiz questions data
 export const quizQuestions = [
   {
-    question: "which of these shows ikhfaa?",
+    question: "The word 'قَالَ' contains Madd Tabeeaa.",
     answers: [
-      { text: "من قبل", isCorrect: true },
-      { text: "من بعد", isCorrect: false },
-      { text: "من وراء", isCorrect: false },
-      { text: "من خلف", isCorrect: false },
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
     ],
   },
   {
-    question: "what's the meaning of idgham?",
+    question: "Madd Tabeeaa is also known as natural elongation.",
     answers: [
-      { text: "hide", isCorrect: false },
-      { text: "merge", isCorrect: true },
-      { text: "turn over", isCorrect: false },
-      { text: "clear", isCorrect: false },
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
     ],
   },
   {
-    question: "what are we suppoed to do when we see 'نّ' or 'مّ'?",
+    question: "In the word 'سُوءَ', has Madd Tabeeaa.",
     answers: [
-      { text: "Do Nothing", isCorrect: false },
-      { text: "Do Ghunnah", isCorrect: true },
-      { text: "Do Idgham", isCorrect: false },
-      { text: "Do Ikhfa", isCorrect: false },
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
     ],
   },
   {
-    question: "What do we do when نْ meets ب?",
+    question:
+      "Madd Tabeeaa occurs when a harakah (vowel) is followed by a sukoon.",
     answers: [
-      { text: "Merge them", isCorrect: false },
-      { text: "Change ن to م (Iqlab)", isCorrect: true },
-      { text: "Hide the sound", isCorrect: false },
-      { text: "say them clearly", isCorrect: false },
+      { text: "True", isCorrect: false },
+      { text: "False", isCorrect: true },
     ],
   },
   {
-    question: "Which of these shows Izhaar?",
+    question: "The word 'نُوحِيهَا' contains Madd Tabeeaa on the.",
     answers: [
-      { text: "من حليب", isCorrect: true },
-      { text: "من ربك", isCorrect: false },
-      { text: "من بعد", isCorrect: false },
-      { text: "عن بنت", isCorrect: false },
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
     ],
   },
   {
-    question: "How long is the Ghunnah sound?",
+    question: "Madd Tabeeaa should be elongated for 4 beats.",
     answers: [
-      { text: "1 second", isCorrect: false },
-      { text: "2 beats", isCorrect: true },
-      { text: "No sound", isCorrect: false },
-      { text: "Very long", isCorrect: false },
+      { text: "True", isCorrect: false },
+      { text: "False", isCorrect: true },
     ],
   },
   {
-    question: "Which letter doesn't make Qalqalah?",
+    question: "In the word 'ضَالِّينَ', has Madd Tabeeaa.",
     answers: [
-      { text: "ق", isCorrect: false },
-      { text: "ب", isCorrect: false },
-      { text: "م", isCorrect: true },
-      { text: "ط", isCorrect: false },
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
     ],
   },
   {
-    question: "When do we hide نْ (Ikhfaa)?",
+    question:
+      "Madd Tabeeaa occurs when a letter of madd (ا, و, ي) is followed immediately by a hamzah (ء) in the same word.",
     answers: [
-      { text: "Before ت", isCorrect: true },
-      { text: "Before م", isCorrect: false },
-      { text: "Before ب", isCorrect: false },
-      { text: "Before و", isCorrect: false },
+      { text: "True", isCorrect: false },
+      { text: "False", isCorrect: true },
     ],
   },
   {
-    question: "Which word has Ghunnah?",
+    question: "The word 'جَاءَ' contains Madd Tabeeaa.",
     answers: [
-      { text: "أمّ", isCorrect: true },
-      { text: "باب", isCorrect: false },
-      { text: "قلم", isCorrect: false },
-      { text: "دين", isCorrect: false },
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
+    ],
+  },
+  {
+    question: "Madd Tabeeaa is the shortest type of elongation in Tajweed.",
+    answers: [
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
     ],
   },
 ];
@@ -343,26 +334,62 @@ export const speakingCards = [
 export const findMatchData = [
   // Izhaar
   { id: 1, text: "Izhaar", emoji: "🗣️", pairId: 1, subtitle: "Term" },
-  { id: 2, text: "Clear Pronunciation of نْ before ح خ ه ع غ أ", emoji: "🔊", pairId: 1, subtitle: "Definition" },
+  {
+    id: 2,
+    text: "Clear Pronunciation of نْ before ح خ ه ع غ أ",
+    emoji: "🔊",
+    pairId: 1,
+    subtitle: "Definition",
+  },
 
   // Ikhfaa
   { id: 3, text: "Ikhfaa", emoji: "🙊", pairId: 2, subtitle: "Term" },
-  { id: 4, text: "Hiding the sound of نْ or tanween", emoji: "👻", pairId: 2, subtitle: "Definition" },
+  {
+    id: 4,
+    text: "Hiding the sound of نْ or tanween",
+    emoji: "👻",
+    pairId: 2,
+    subtitle: "Definition",
+  },
 
   // Idgham
   { id: 5, text: "Idgham", emoji: "🔀", pairId: 3, subtitle: "Term" },
-  { id: 6, text: "Merging نْ or tanween into ي ر م ل و ن", emoji: "🔄", pairId: 3, subtitle: "Definition" },
+  {
+    id: 6,
+    text: "Merging نْ or tanween into ي ر م ل و ن",
+    emoji: "🔄",
+    pairId: 3,
+    subtitle: "Definition",
+  },
 
   // Iqlab
   { id: 7, text: "Iqlab", emoji: "🔄", pairId: 4, subtitle: "Term" },
-  { id: 8, text: "Changing نْ or tanween to a م sound before ب", emoji: "🔁", pairId: 4, subtitle: "Definition" },
+  {
+    id: 8,
+    text: "Changing نْ or tanween to a م sound before ب",
+    emoji: "🔁",
+    pairId: 4,
+    subtitle: "Definition",
+  },
 
   // Additional pairs (optional)
   { id: 9, text: "Izhaar Letters", emoji: "🔤", pairId: 5, subtitle: "Term" },
-  { id: 10, text: "ح خ ه ع غ أ", emoji: "📜", pairId: 5, subtitle: "Definition" },
+  {
+    id: 10,
+    text: "ح خ ه ع غ أ",
+    emoji: "📜",
+    pairId: 5,
+    subtitle: "Definition",
+  },
 
   { id: 11, text: "Idgham Letters", emoji: "🔠", pairId: 6, subtitle: "Term" },
-  { id: 12, text: "ي ر م ل و ن", emoji: "✍️", pairId: 6, subtitle: "Definition" }
+  {
+    id: 12,
+    text: "ي ر م ل و ن",
+    emoji: "✍️",
+    pairId: 6,
+    subtitle: "Definition",
+  },
 ].sort(() => Math.random() - 0.5);
 
 // Unjumble Game Data - Rearrange words to form correct sentences

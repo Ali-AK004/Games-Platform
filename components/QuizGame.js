@@ -6,24 +6,47 @@ export default function QuizGame({ questions }) {
   const [showResult, setShowResult] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
+  const [answeredQuestions, setAnsweredQuestions] = useState({});
 
   const handleAnswer = (isCorrect, answerIndex) => {
+    // Only allow answering if not already answered
+    if (answeredQuestions[currentQuestion]) return;
+
     setSelectedAnswer(answerIndex);
     setShowFeedback(true);
 
-    if (isCorrect) setScore(score + 1);
+    if (isCorrect) {
+      setScore(score + 1);
+    }
 
-    // Show feedback for 1.5 seconds before moving to next question
-    setTimeout(() => {
-      const nextQuestion = currentQuestion + 1;
-      if (nextQuestion < questions.length) {
-        setCurrentQuestion(nextQuestion);
-        setSelectedAnswer(null);
-        setShowFeedback(false);
-      } else {
-        setShowResult(true);
-      }
-    }, 1500);
+    // Mark this question as answered
+    setAnsweredQuestions({
+      ...answeredQuestions,
+      [currentQuestion]: {
+        selectedIndex: answerIndex,
+        isCorrect: isCorrect,
+      },
+    });
+  };
+
+  const goToNextQuestion = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+      setSelectedAnswer(null);
+      setShowFeedback(false);
+    } else {
+      setShowResult(true);
+    }
+  };
+
+  const goToPrevQuestion = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+      // Restore previous answer state if this question was answered before
+      const prevAnswer = answeredQuestions[currentQuestion - 1];
+      setSelectedAnswer(prevAnswer ? prevAnswer.selectedIndex : null);
+      setShowFeedback(!!prevAnswer);
+    }
   };
 
   const resetQuiz = () => {
@@ -32,6 +55,7 @@ export default function QuizGame({ questions }) {
     setShowResult(false);
     setSelectedAnswer(null);
     setShowFeedback(false);
+    setAnsweredQuestions({});
   };
 
   const getScoreEmoji = () => {
@@ -49,6 +73,9 @@ export default function QuizGame({ questions }) {
     if (percentage >= 50) return "Good work! Keep practicing!";
     return "Nice try! Practice makes perfect!";
   };
+
+  // Check if current question has been answered
+  const isCurrentAnswered = answeredQuestions[currentQuestion];
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -117,12 +144,13 @@ export default function QuizGame({ questions }) {
           </div>
 
           {/* Answer Options */}
-          <div className="space-y-4">
+          <div className="space-y-4 mb-6">
             {questions[currentQuestion].answers.map((answer, index) => {
               let buttonClass =
                 "w-full p-4 rounded-2xl font-bold text-lg transition-all duration-300 cursor-pointer transform hover:scale-105 ";
 
-              if (showFeedback) {
+              // Show feedback if answered or if we're showing feedback for current question
+              if (isCurrentAnswered || showFeedback) {
                 if (answer.isCorrect) {
                   buttonClass += "bg-green-500 text-white shadow-lg";
                 } else if (selectedAnswer === index) {
@@ -138,18 +166,15 @@ export default function QuizGame({ questions }) {
               return (
                 <button
                   key={index}
-                  onClick={() =>
-                    !showFeedback && handleAnswer(answer.isCorrect, index)
-                  }
+                  onClick={() => handleAnswer(answer.isCorrect, index)}
                   className={buttonClass}
-                  disabled={showFeedback}
+                  disabled={isCurrentAnswered || showFeedback}
                 >
                   <div className="flex items-center justify-between">
                     <span>{answer.text}</span>
-                    {showFeedback && answer.isCorrect && (
-                      <span className="text-2xl">✅</span>
-                    )}
-                    {showFeedback &&
+                    {(isCurrentAnswered || showFeedback) &&
+                      answer.isCorrect && <span className="text-2xl">✅</span>}
+                    {(isCurrentAnswered || showFeedback) &&
                       !answer.isCorrect &&
                       selectedAnswer === index && (
                         <span className="text-2xl">❌</span>
@@ -160,8 +185,34 @@ export default function QuizGame({ questions }) {
             })}
           </div>
 
+          {/* Navigation Buttons */}
+          <div className="flex justify-between mb-6">
+            <button
+              onClick={goToPrevQuestion}
+              disabled={currentQuestion === 0}
+              className={`px-6 py-3 rounded-lg font-bold text-lg  transition-all duration-300 ${
+                currentQuestion === 0
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "bg-blue-500 text-white hover:bg-blue-600 cursor-pointer shadow-md hover:shadow-lg"
+              }`}
+            >
+              ← Previous
+            </button>
+            <button
+              onClick={goToNextQuestion}
+              disabled={!isCurrentAnswered && !showFeedback}
+              className={`px-6 py-3 rounded-lg font-bold text-lg transition-all duration-300 ${
+                !isCurrentAnswered && !showFeedback
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  : "bg-blue-500 text-white hover:bg-blue-600 cursor-pointer shadow-md hover:shadow-lg"
+              }`}
+            >
+              {currentQuestion === questions.length - 1 ? "Finish" : "Next →"}
+            </button>
+          </div>
+
           {/* Score Display */}
-          <div className="mt-6 text-center">
+          <div className="text-center">
             <div className="bg-gray-100 rounded-lg px-6 py-3 inline-block">
               <span className="text-gray-700 font-bold text-lg">
                 🏆 Score: {score} / {questions.length}
