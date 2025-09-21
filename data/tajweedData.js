@@ -17,8 +17,8 @@ export const quizQuestions = [
   {
     question: "In the word 'سُوءَ', has Madd Tabeeaa.",
     answers: [
-      { text: "True", isCorrect: true },
-      { text: "False", isCorrect: false },
+      { text: "True", isCorrect: false },
+      { text: "False", isCorrect: true },
     ],
   },
   {
@@ -61,8 +61,8 @@ export const quizQuestions = [
   {
     question: "The word 'جَاءَ' contains Madd Tabeeaa.",
     answers: [
-      { text: "True", isCorrect: true },
-      { text: "False", isCorrect: false },
+      { text: "True", isCorrect: false },
+      { text: "False", isCorrect: true },
     ],
   },
   {
