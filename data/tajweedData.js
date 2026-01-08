@@ -1,75 +1,153 @@
 // Quiz questions data
 export const quizQuestions = [
   {
-    question: "The word 'قَالَ' contains Madd Tabeeaa.",
+    question: "When Noon Sakinah comes before the letter ب, the rule is Iqlab.",
     answers: [
       { text: "True", isCorrect: true },
       { text: "False", isCorrect: false },
     ],
   },
   {
-    question: "Madd Tabeeaa is also known as natural elongation.",
+    question: "Ikhfa means we hide the sound a little.",
     answers: [
       { text: "True", isCorrect: true },
       { text: "False", isCorrect: false },
     ],
   },
   {
-    question: "In the word 'سُوءَ', has Madd Tabeeaa.",
-    answers: [
-      { text: "True", isCorrect: false },
-      { text: "False", isCorrect: true },
-    ],
-  },
-  {
-    question:
-      "Madd Tabeeaa occurs when a harakah (vowel) is followed by a sukoon.",
-    answers: [
-      { text: "True", isCorrect: false },
-      { text: "False", isCorrect: true },
-    ],
-  },
-  {
-    question: "The word 'نُوحِيهَا' contains Madd Tabeeaa on the.",
+    question: "Idgham means we read two letters together.",
     answers: [
       { text: "True", isCorrect: true },
       { text: "False", isCorrect: false },
     ],
   },
   {
-    question: "Madd Tabeeaa should be elongated for 4 beats.",
-    answers: [
-      { text: "True", isCorrect: false },
-      { text: "False", isCorrect: true },
-    ],
-  },
-  {
-    question: "In the word 'ضَالِّينَ', has Madd Tabeeaa.",
+    question: "Izhar means the sound is clear and strong.",
     answers: [
       { text: "True", isCorrect: true },
       { text: "False", isCorrect: false },
     ],
   },
   {
-    question:
-      "Madd Tabeeaa occurs when a letter of madd (ا, و, ي) is followed immediately by a hamzah (ء) in the same word.",
-    answers: [
-      { text: "True", isCorrect: false },
-      { text: "False", isCorrect: true },
-    ],
-  },
-  {
-    question: "The word 'جَاءَ' contains Madd Tabeeaa.",
-    answers: [
-      { text: "True", isCorrect: false },
-      { text: "False", isCorrect: true },
-    ],
-  },
-  {
-    question: "Madd Tabeeaa is the shortest type of elongation in Tajweed.",
+    question: "Noon Sakinah has rules when it has no harakah.",
     answers: [
       { text: "True", isCorrect: true },
       { text: "False", isCorrect: false },
+    ],
+  },
+  {
+    question: "Tanween sounds like an extra Noon at the end of a word.",
+    answers: [
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
+    ],
+  },
+  {
+    question: "Meem Sakinah is a Meem with no vowel on it.",
+    answers: [
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
+    ],
+  },
+  {
+    question: "When Meem Sakinah meets another Meem, we do Idgham.",
+    answers: [
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
+    ],
+  },
+  {
+    question: "Ikhfa Shafawi happens when Meem Sakinah comes before ب.",
+    answers: [
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
+    ],
+  },
+  {
+    question: "Izhar Shafawi means reading Meem clearly.",
+    answers: [
+      { text: "True", isCorrect: true },
+      { text: "False", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'مِنۢ بَعْدِ', which rule is this?",
+    answers: [
+      { text: "Iqlab", isCorrect: true },
+      { text: "Ikhfa", isCorrect: false },
+      { text: "Izhar", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'مِنْ رَبِّهِمْ', which rule is this?",
+    answers: [
+      { text: "Idgham", isCorrect: true },
+      { text: "Ikhfa", isCorrect: false },
+      { text: "Iqlab", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'مِنْ هَادٍ', which rule is this?",
+    answers: [
+      { text: "Izhar", isCorrect: true },
+      { text: "Idgham", isCorrect: false },
+      { text: "Ikhfa", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'عَلِيمٌ خَبِيرٌ', which rule is this?",
+    answers: [
+      { text: "Ikhfa", isCorrect: true },
+      { text: "Izhar", isCorrect: false },
+      { text: "Iqlab", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'سَمِيعٌ بَصِيرٌ', which rule is this?",
+    answers: [
+      { text: "Iqlab", isCorrect: true },
+      { text: "Ikhfa", isCorrect: false },
+      { text: "Idgham", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'لَهُمْ مَّغْفِرَةٌ', which rule is this?",
+    answers: [
+      { text: "Idgham Shafawi", isCorrect: true },
+      { text: "Ikhfa Shafawi", isCorrect: false },
+      { text: "Izhar Shafawi", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'تَرْمِيهِمْ بِحِجَارَةٍ', which rule is this?",
+    answers: [
+      { text: "Ikhfa Shafawi", isCorrect: true },
+      { text: "Idgham Shafawi", isCorrect: false },
+      { text: "Izhar Shafawi", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'أَمْ لَهُمْ', which rule is this?",
+    answers: [
+      { text: "Izhar Shafawi", isCorrect: true },
+      { text: "Ikhfa Shafawi", isCorrect: false },
+      { text: "Idgham Shafawi", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'مَنْ يَعْمَلْ', which rule is this?",
+    answers: [
+      { text: "Idgham", isCorrect: true },
+      { text: "Izhar", isCorrect: false },
+      { text: "Ikhfa", isCorrect: false },
+    ],
+  },
+  {
+    question: "In the word 'مِنْ قَبْلُ', which rule is this?",
+    answers: [
+      { text: "Ikhfa", isCorrect: true },
+      { text: "Idgham", isCorrect: false },
+      { text: "Izhar", isCorrect: false },
     ],
   },
 ];
@@ -77,51 +155,85 @@ export const quizQuestions = [
 export const wheelItems = [
   "Ghunnah",
   "Idgham",
-  "Ikhfa",
+  "Ikhfa haqiqi",
   "Iqlab",
-  "Izhaar",
+  "Izhaar halqi",
   "Qalqalah",
+
+  // Meem Sakinah rules
+  "Idgham Shafawi",
+  "Ikhfa Shafawi",
+  "Izhaar Shafawi",
 ];
+
 
 export const matchingPairs = ["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د"];
 
 export const flashCards = [
   {
     question: "What is Tajweed?",
-    answer:
-      "The art of reciting the Quran with proper pronunciation, rhythm, and rules",
+    answer: "Reading the Quran the right way, just like the Prophet ﷺ taught us",
   },
   {
-    question: "What is 'Ghunnah'?",
-    answer: "A nasal sound",
+    question: "What is Ghunnah?",
+    answer: "A soft sound from the nose",
   },
   {
-    question: "What does 'Idgham' mean?",
-    answer: "Merging or mixing of 'نْ' with certain letters 'يرملون'",
+    question: "What is Idgham?",
+    answer: "Putting two letters together when we read",
   },
   {
-    question: "What is 'Ikhfa'?",
-    answer: "Hiding the sound of noon sakinah or tanween",
+    question: "Which letters make Idgham?",
+    answer: "ي ر م ل و ن",
   },
   {
-    question: "What does 'Iqlab' mean?",
-    answer:
-      "Changing noon sakinah or tanween into a meem sound before the letter ب",
+    question: "What is Ikhfa?",
+    answer: "Hiding the sound a little",
   },
   {
-    question: "What is 'Izhar'?",
-    answer:
-      "Clear pronunciation of noon sakinah or tanween before throat letters 'ه ء ع ح غ خ'",
+    question: "What is Iqlab?",
+    answer: "Changing the Noon sound into a Meem sound before ب",
   },
   {
-    question: "What are the throat letters for Izhar?",
-    answer: "ء ، ه، ع، ح، غ، خ (hamza, Ha, Ain, Ha, Ghain, Kha)",
+    question: "What is Izhar?",
+    answer: "Reading the sound clearly and strong",
   },
   {
-    question: "What is 'Qalqalah'?",
-    answer: "A bouncing or echoing sound done with letters ق، ط، ب، ج، د",
+    question: "Which letters are Izhar letters?",
+    answer: "ء ه ع ح غ خ",
+  },
+  {
+    question: "What is Qalqalah?",
+    answer: "A bouncing sound when we stop on a letter",
+  },
+  {
+    question: "Which letters have Qalqalah?",
+    answer: "ق ط ب ج د",
+  },
+
+  // Meem Sakinah rules
+  {
+    question: "What is Meem Sakinah?",
+    answer: "A Meem with no vowel on it",
+  },
+  {
+    question: "What is Idgham Shafawi?",
+    answer: "When two Meems come together, we merge them",
+  },
+  {
+    question: "What is Ikhfa Shafawi?",
+    answer: "Hiding the Meem sound before the letter ب",
+  },
+  {
+    question: "What is Izhar Shafawi?",
+    answer: "Reading the Meem clearly with the lips",
+  },
+  {
+    question: "How many rules does Meem Sakinah have?",
+    answer: "Three rules",
   },
 ];
+
 
 // Match Up Game Data - Drag keywords to definitions
 export const matchUpData = {
