@@ -97,8 +97,8 @@ export const quizQuestions = [
   {
     question: "In the word 'عَلِيمٌ خَبِيرٌ', which rule is this?",
     answers: [
-      { text: "Ikhfa", isCorrect: true },
-      { text: "Izhar", isCorrect: false },
+      { text: "Ikhfa", isCorrect: false },
+      { text: "Izhar", isCorrect: true },
       { text: "Iqlab", isCorrect: false },
     ],
   },
@@ -113,7 +113,7 @@ export const quizQuestions = [
   {
     question: "In the word 'لَهُمْ مَّغْفِرَةٌ', which rule is this?",
     answers: [
-      { text: "Idgham Shafawi", isCorrect: true },
+      { text: "Idgham mutamathelyn", isCorrect: true },
       { text: "Ikhfa Shafawi", isCorrect: false },
       { text: "Izhar Shafawi", isCorrect: false },
     ],
@@ -122,7 +122,7 @@ export const quizQuestions = [
     question: "In the word 'تَرْمِيهِمْ بِحِجَارَةٍ', which rule is this?",
     answers: [
       { text: "Ikhfa Shafawi", isCorrect: true },
-      { text: "Idgham Shafawi", isCorrect: false },
+      { text: "Idgham mutamathelyn", isCorrect: false },
       { text: "Izhar Shafawi", isCorrect: false },
     ],
   },
@@ -131,7 +131,7 @@ export const quizQuestions = [
     answers: [
       { text: "Izhar Shafawi", isCorrect: true },
       { text: "Ikhfa Shafawi", isCorrect: false },
-      { text: "Idgham Shafawi", isCorrect: false },
+      { text: "Idgham mutamathelyn", isCorrect: false },
     ],
   },
   {
@@ -161,7 +161,7 @@ export const wheelItems = [
   "Qalqalah",
 
   // Meem Sakinah rules
-  "Idgham Shafawi",
+  "Idgham mutamathelyn",
   "Ikhfa Shafawi",
   "Izhaar Shafawi",
 ];
@@ -217,7 +217,7 @@ export const flashCards = [
     answer: "A Meem with no vowel on it",
   },
   {
-    question: "What is Idgham Shafawi?",
+    question: "What is Idgham mutamathelyn?",
     answer: "When two Meems come together, we merge them",
   },
   {

@@ -76,7 +76,7 @@ export default function WheelGame({ items }) {
         <div className="absolute -inset-4 bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-400 rounded-full animate-pulse opacity-75"></div>
 
         {/* Main wheel container */}
-        <div className="relative w-80 h-80 bg-white rounded-full shadow-2xl p-2">
+        <div className="relative w-[500px] h-[500px] bg-white rounded-full shadow-2xl p-2">
           <div
             ref={wheelRef}
             className="w-full h-full rounded-full overflow-hidden relative shadow-inner"
@@ -111,7 +111,7 @@ export default function WheelGame({ items }) {
                     <span
                       className="text-white font-bold text-lg drop-shadow-lg whitespace-nowrap"
                       style={{
-                        transform: "translateY(-100px)",
+                        transform: "translateY(-180px)",
                         transformOrigin: "center center",
                       }}
                     >
