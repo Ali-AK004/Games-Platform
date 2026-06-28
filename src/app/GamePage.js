@@ -15,6 +15,12 @@ import {
   unjumbleData,
   completeSentenceData,
 } from "../../data/tajweedData";
+import {
+  lonelyLetters,
+  sortLetters,
+  wordBuilderChallenges,
+  connectPairs,
+} from "../../data/arabicLettersData";
 import WheelGame from "../../components/SpinWheel";
 import QuizGame from "../../components/QuizGame";
 import MatchingPairsGame from "../../components/MatchingGame";
@@ -27,6 +33,7 @@ import SpeakingCardsGame from "../../components/SpeakingCardsGame";
 import FindMatchGame from "../../components/FindMatchGame";
 import UnjumbleGame from "../../components/UnjumbleGame";
 import CompleteSentenceGame from "../../components/CompleteSentenceGame";
+import ArabicLettersGame from "../../components/ArabicLettersGame";
 import { Bounce, ToastContainer } from "react-toastify";
 
 const GAME_TYPES = {
@@ -42,6 +49,7 @@ const GAME_TYPES = {
   FIND_MATCH: "find_match",
   UNJUMBLE: "unjumble",
   COMPLETE_SENTENCE: "complete_sentence",
+  ARABIC_LETTERS: "arabic_letters",
 };
 
 export default function GamesPage() {
@@ -170,6 +178,13 @@ export default function GamesPage() {
               bgColor="bg-lime-500"
               onClick={() => setCurrentGame(GAME_TYPES.COMPLETE_SENTENCE)}
             />
+            <GameCard
+              title="✍️ Lonely Letters"
+              description="Drag, build words, and fix letter chains!"
+              emoji="✍️"
+              bgColor="bg-rose-500"
+              onClick={() => setCurrentGame(GAME_TYPES.ARABIC_LETTERS)}
+            />
           </div>
         ) : (
           <div>
@@ -218,6 +233,16 @@ export default function GamesPage() {
               {currentGame === GAME_TYPES.COMPLETE_SENTENCE && (
                 <CompleteSentenceGame
                   completeSentenceData={completeSentenceData}
+                />
+              )}
+              {currentGame === GAME_TYPES.ARABIC_LETTERS && (
+                <ArabicLettersGame
+                  arabicLettersData={{
+                    lonelyLetters,
+                    sortLetters,
+                    wordBuilderChallenges,
+                    connectPairs,
+                  }}
                 />
               )}
             </div>
