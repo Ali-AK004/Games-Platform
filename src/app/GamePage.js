@@ -21,6 +21,11 @@ import {
   wordBuilderChallenges,
   connectPairs,
 } from "../../data/arabicLettersData";
+
+import {
+  hathaHadhiWords,
+  hathaHadhiCategories,
+} from "../../data/hathaHadhiData";
 import WheelGame from "../../components/SpinWheel";
 import QuizGame from "../../components/QuizGame";
 import MatchingPairsGame from "../../components/MatchingGame";
@@ -35,6 +40,7 @@ import UnjumbleGame from "../../components/UnjumbleGame";
 import CompleteSentenceGame from "../../components/CompleteSentenceGame";
 import ArabicLettersGame from "../../components/ArabicLettersGame";
 import { Bounce, ToastContainer } from "react-toastify";
+import HathaHadhiGame from "../../components/HathaHadhiGame";
 
 const GAME_TYPES = {
   QUIZ: "quiz",
@@ -50,6 +56,7 @@ const GAME_TYPES = {
   UNJUMBLE: "unjumble",
   COMPLETE_SENTENCE: "complete_sentence",
   ARABIC_LETTERS: "arabic_letters",
+  HATHA_HADHI: "hatha_hadhi",
 };
 
 export default function GamesPage() {
@@ -185,6 +192,13 @@ export default function GamesPage() {
               bgColor="bg-rose-500"
               onClick={() => setCurrentGame(GAME_TYPES.ARABIC_LETTERS)}
             />
+            <GameCard
+              title="👉 هذا أم هذه؟"
+              description="Sort words into هذا and هذه!"
+              emoji="🧩"
+              bgColor="bg-cyan-500"
+              onClick={() => setCurrentGame(GAME_TYPES.HATHA_HADHI)}
+            />
           </div>
         ) : (
           <div>
@@ -199,6 +213,12 @@ export default function GamesPage() {
             <div className="bg-white rounded-2xl p-6 shadow-lg">
               {currentGame === GAME_TYPES.QUIZ && (
                 <QuizGame questions={quizQuestions} />
+              )}
+              {currentGame === GAME_TYPES.HATHA_HADHI && (
+                <HathaHadhiGame
+                  words={hathaHadhiWords}
+                  categories={hathaHadhiCategories}
+                />
               )}
               {currentGame === GAME_TYPES.WHEEL && (
                 <WheelGame items={wheelItems} />
