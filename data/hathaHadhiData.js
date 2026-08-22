@@ -11,7 +11,6 @@ export const hathaHadhiWords = [
   { id: "hh8", word: "وَلَد", meaning: "boy", emoji: "👦", answer: "هذا" },
   { id: "hh9", word: "مَوْز", meaning: "banana", emoji: "🍌", answer: "هذا" },
   { id: "hh10", word: "فِيل", meaning: "elephant", emoji: "🐘", answer: "هذا" },
-
   { id: "hh11", word: "سَيَّارَة", meaning: "car", emoji: "🚗", answer: "هذه" },
   { id: "hh12", word: "كُرَة", meaning: "ball", emoji: "⚽", answer: "هذه" },
   { id: "hh13", word: "شَجَرَة", meaning: "tree", emoji: "🌳", answer: "هذه" },
